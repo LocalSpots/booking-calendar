@@ -1,5 +1,5 @@
 
-# TourTrip Booking Module
+# LocalSpots Booking Module
 
 A tour trip booking module built with React, ExpressJS and mysql database.
 
