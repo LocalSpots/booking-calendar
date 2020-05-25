@@ -24,7 +24,7 @@ npm install
 
 To seed database:
 ```
-npm seed
+npm run seed
 ```
 
 To start the server:
