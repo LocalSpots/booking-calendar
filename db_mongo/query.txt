@@ -1,4 +1,6 @@
 mongoimport --db=localspots_calendar --collection=trips --type=csv --headerline --file=/Users/karen8/Documents/GitHub/localspots-travelers-server/db_mongo/trips.csv
 mongoimport --db=localspots_calendar --collection=trips --type=csv --headerline --file=trips.csv
+mongoimport --db=localspots_calendar --collection=prices --type=csv --headerline --file=prices.csv
+mongoimport --db=localspots_calendar --collection=trip --type=csv --headerline --file=trip.csv
 
 

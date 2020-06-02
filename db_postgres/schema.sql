@@ -33,6 +33,8 @@ CREATE TABLE Trip (
   num_child INTEGER NOT NULL,
   id_account INTEGER NOT NULL,
   id_Prices INTEGER NOT NULL,
+  created_at varchar(255) NOT NULL,
+  updated_at varchar(255) NOT NULL,
   PRIMARY KEY (id)
 );
 
@@ -44,6 +46,8 @@ CREATE TABLE Trip (
 COPY Trips(id,name,description,duration,numtotal_booked) 
 FROM '/Users/karen8/Documents/GitHub/localspots-travelers-server/db_postgres/trips.csv' DELIMITER ',' CSV HEADER;
 COPY Prices(id,id_Trips,trip_date,trip_availability,price,fee_cancel) 
+FROM '/Users/karen8/Documents/GitHub/localspots-travelers-server/db_postgres/prices.csv' DELIMITER ',' CSV HEADER;
+COPY Trip(id,num_adult,num_child,id_account,id_Prices,created_at,updated_at) 
 FROM '/Users/karen8/Documents/GitHub/localspots-travelers-server/db_postgres/prices.csv' DELIMITER ',' CSV HEADER;
 
 -- ---
