@@ -45,3 +45,5 @@ db.trip.create()
 db.prices.updateOne()
 
 db.trips.updateOne()
+
+/Users/karen8/Documents/GitHub/localspots-travelers-server/db_postgres/trips.csv
