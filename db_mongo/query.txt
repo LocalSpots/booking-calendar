@@ -46,4 +46,4 @@ db.prices.updateOne()
 
 db.trips.updateOne()
 
-/Users/karen8/Documents/GitHub/localspots-travelers-server/db_postgres/trips.csv
+git filter-branch --index-filter "git rm -rf --cached --ignore-unmatch db_postgres/trips.csv" HEAD
