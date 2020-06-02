@@ -11,6 +11,7 @@
     "test-watch": "jest --watch",
     "test-coverage": "jest --coverage --colors",
     "seed": "mysql -u root -p <db/schema.sql && node db/dbseed",
+    "seed:postgres": "psql -U postgres -f db_postgres/schema.sql",
     "build-docker": "bash buildDocker.bash"
   },
   "dependencies": {

@@ -1,15 +1,13 @@
 DROP DATABASE IF EXISTS localspots_calendar;
-
 CREATE DATABASE localspots_calendar;
-
-USE localspots_calendar;
+\c localspots_calendar;
 
 DROP TABLE IF EXISTS Trips;
 		
 CREATE TABLE Trips (
   id SERIAL NOT NULL,
   name VARCHAR(255) NOT NULL,
-  description INTEGER NOT NULL,
+  description VARCHAR(255) NOT NULL,
   duration VARCHAR(255) NOT NULL,
   numtotal_booked INTEGER NOT NULL,
   PRIMARY KEY (id)
@@ -20,7 +18,7 @@ DROP TABLE IF EXISTS Prices;
 CREATE TABLE Prices (
   id SERIAL NOT NULL,
   id_Trips INTEGER NOT NULL,
-  trip_date DATE NOT NULL,
+  trip_date INTEGER NOT NULL,
   trip_availability INTEGER NOT NULL,
   price INTEGER NOT NULL,
   fee_cancel INTEGER NOT NULL,
@@ -37,6 +35,16 @@ CREATE TABLE Trip (
   id_Prices INTEGER NOT NULL,
   PRIMARY KEY (id)
 );
+
+
+-- ---
+-- Seed
+-- ---
+
+COPY Trips(id,name,description,duration,numtotal_booked) 
+FROM '/Users/karen8/Documents/GitHub/localspots-travelers-server/db_postgres/trips.csv' DELIMITER ',' CSV HEADER;
+COPY Prices(id,id_Trips,trip_date,trip_availability,price,fee_cancel) 
+FROM '/Users/karen8/Documents/GitHub/localspots-travelers-server/db_postgres/prices.csv' DELIMITER ',' CSV HEADER;
 
 -- ---
 -- Foreign Keys 
