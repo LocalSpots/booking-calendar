@@ -46,4 +46,4 @@ db.prices.updateOne()
 
 db.trips.updateOne()
 
-git filter-branch --index-filter "git rm -rf --cached --ignore-unmatch db_postgres/trips.csv" HEAD
+git filter-branch -f --index-filter "git rm -rf --cached --ignore-unmatch db_postgres/trip.csv" HEAD
