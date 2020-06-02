@@ -4,3 +4,44 @@ mongoimport --db=localspots_calendar --collection=prices --type=csv --headerline
 mongoimport --db=localspots_calendar --collection=trip --type=csv --headerline --file=trip.csv
 
 
+db.prices.findOne({id:900000})
+{
+	"_id" : ObjectId("5ed6c41ead0da5f5089ee37a"),
+	"id" : 900000,
+	"id_Trips" : 668326,
+	"trip_date" : 20200516,
+	"trip_availability" : 12,
+	"price" : 481,
+	"fee_cancel" : 40
+}
+
+db.prices.find({id_Trips:668326, trip_date:20200516})
+
+db.prices.find({id_Trips:668326, trip_date:20200516}).explain('executionStats')
+{
+	"_id" : ObjectId("5ed6c41ead0da5f5089ee37a"),
+	"id" : 900000,
+	"id_Trips" : 668326,
+	"trip_date" : 20200516,
+	"trip_availability" : 12,
+	"price" : 481,
+	"fee_cancel" : 40
+}
+
+db.collection.createIndex( <key and index type specification>, <options> )
+
+db.prices.createIndex( {id_Trips: 1} )
+
+{
+	"createdCollectionAutomatically" : false,
+	"numIndexesBefore" : 1,
+	"numIndexesAfter" : 2,
+	"ok" : 1
+}
+
+
+db.trip.create()
+
+db.prices.updateOne()
+
+db.trips.updateOne()

@@ -56,3 +56,9 @@ FROM '/Users/karen8/Documents/GitHub/localspots-travelers-server/db_postgres/tri
 
 ALTER TABLE Prices ADD FOREIGN KEY (id_Trips) REFERENCES Trips (id);
 ALTER TABLE Trip ADD FOREIGN KEY (id_Prices) REFERENCES Prices (id);
+
+-- ---
+-- INDEXES
+-- ---
+create index primary_lookup
+on Prices (id_Trips);
