@@ -48,7 +48,7 @@ FROM '/Users/karen8/Documents/GitHub/localspots-travelers-server/db_postgres/tri
 COPY Prices(id,id_Trips,trip_date,trip_availability,price,fee_cancel) 
 FROM '/Users/karen8/Documents/GitHub/localspots-travelers-server/db_postgres/prices.csv' DELIMITER ',' CSV HEADER;
 COPY Trip(id,num_adult,num_child,id_account,id_Prices,created_at,updated_at) 
-FROM '/Users/karen8/Documents/GitHub/localspots-travelers-server/db_postgres/prices.csv' DELIMITER ',' CSV HEADER;
+FROM '/Users/karen8/Documents/GitHub/localspots-travelers-server/db_postgres/trip.csv' DELIMITER ',' CSV HEADER;
 
 -- ---
 -- Foreign Keys 
