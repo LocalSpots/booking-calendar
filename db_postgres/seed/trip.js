@@ -8,7 +8,8 @@ writeTrip.write('id,num_adult,num_child,id_account,id_Prices,created_at,updated_
 
 
 const writeOneMillion = (writer, encoding, callback) => {
-  let i = 1000000;
+  // let i = 1000000;
+  let i = 10000000;
   let id = 0;
 
   function pickrand(array) {

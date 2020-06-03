@@ -5,3 +5,6 @@ coverage
 
 trip.csv
 *.csv
+*/trip.csv
+*/trips.csv
+*/prices.csv
