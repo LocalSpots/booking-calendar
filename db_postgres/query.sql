@@ -1,6 +1,7 @@
 select trip.id from Trip
 join Prices on Trip.id_Prices = Prices.id;
 
+<<<<<<< HEAD
 -- This gets the Archetypal prices for a certain Trip
 
 select * from Prices
@@ -65,3 +66,6 @@ where id = 800000;
  update Prices
 set trip_availability = trip_availability - 1
 where id = 900000;
+=======
+// Timing is "explain analyze"
+>>>>>>> 61f9510c6c97baf1ac89aae15d1eedb7122dabf5

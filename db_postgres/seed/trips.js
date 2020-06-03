@@ -2,14 +2,25 @@ const faker = require('faker');
 const fs = require('fs');
 const _ = require('underscore');
 
+<<<<<<< HEAD
 
 const writeTrips = fs.createWriteStream('trips.csv');
 writeTrips.write('id,name,description,duration,numtotal_booked\n', 'utf8');
+=======
+// module.exports = function (models) {
+
+const writeTours = fs.createWriteStream('tours.csv');
+writeTours.write('id,name,overview,cancellation_policy,return_details,created_at,updated_at\n', 'utf8');
+
+// const randomReviewId = () => Math.floor(Math.random() * Math.floor(100));
+
+>>>>>>> 61f9510c6c97baf1ac89aae15d1eedb7122dabf5
 
 const writeOneMillion = (writer, encoding, callback) => {
   let i = 1000000;
   let id = 0;
 
+<<<<<<< HEAD
   const thingsToDo = ['a day trip at ', 'a nice day trip at ', 'explore the beautiful ', 'a full day trip at '];
 
   const location = ['Chengdu', 'Macau', 'Philadelphia', 'Boston', 'Washington DC', 'Yosemite', 'Yellowstone', 'Arches'];
@@ -31,10 +42,13 @@ const writeOneMillion = (writer, encoding, callback) => {
     const title = `${myLeadin} ${myLocation}}`;
     return title;
   }
+=======
+>>>>>>> 61f9510c6c97baf1ac89aae15d1eedb7122dabf5
 
   const write = () => {
     let ok = true;
     do {
+<<<<<<< HEAD
       i -= 1;
       id += 1;
       const myName = makeTitle();
@@ -43,6 +57,9 @@ const writeOneMillion = (writer, encoding, callback) => {
       const numtotal_booked = _.random(2000, 3000);
 
       const data = `${id},${myName},${myDescription},${myDuration}, ${numtotal_booked}\n`;
+=======
+
+>>>>>>> 61f9510c6c97baf1ac89aae15d1eedb7122dabf5
       if (i === 0) {
         writer.write(data, encoding, callback);
       } else {
@@ -54,9 +71,22 @@ const writeOneMillion = (writer, encoding, callback) => {
     }
   };
   write();
+<<<<<<< HEAD
 };
 
 writeOneMillion(writeTrips, 'utf-8', () => {
   console.log('trips.csv generation completed');
   writeTrips.end();
 });
+=======
+}
+
+writeOneMillion(writeTours, 'utf-8', () => {
+  console.log('tours.csv generation completed');
+  writeTours.end();
+});
+
+
+
+// }
+>>>>>>> 61f9510c6c97baf1ac89aae15d1eedb7122dabf5
