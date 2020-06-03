@@ -1,24 +1,13 @@
 DROP DATABASE IF EXISTS localspots_calendar;
-<<<<<<< HEAD
 CREATE DATABASE localspots_calendar;
 \c localspots_calendar;
-=======
-
-CREATE DATABASE localspots_calendar;
-
-USE localspots_calendar;
->>>>>>> 61f9510c6c97baf1ac89aae15d1eedb7122dabf5
 
 DROP TABLE IF EXISTS Trips;
 		
 CREATE TABLE Trips (
   id SERIAL NOT NULL,
   name VARCHAR(255) NOT NULL,
-<<<<<<< HEAD
   description VARCHAR(255) NOT NULL,
-=======
-  description INTEGER NOT NULL,
->>>>>>> 61f9510c6c97baf1ac89aae15d1eedb7122dabf5
   duration VARCHAR(255) NOT NULL,
   numtotal_booked INTEGER NOT NULL,
   PRIMARY KEY (id)
@@ -29,11 +18,7 @@ DROP TABLE IF EXISTS Prices;
 CREATE TABLE Prices (
   id SERIAL NOT NULL,
   id_Trips INTEGER NOT NULL,
-<<<<<<< HEAD
   trip_date INTEGER NOT NULL,
-=======
-  trip_date DATE NOT NULL,
->>>>>>> 61f9510c6c97baf1ac89aae15d1eedb7122dabf5
   trip_availability INTEGER NOT NULL,
   price INTEGER NOT NULL,
   fee_cancel INTEGER NOT NULL,
