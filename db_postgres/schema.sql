@@ -48,7 +48,6 @@ CREATE TABLE Trip (
   num_child INTEGER NOT NULL,
   id_account INTEGER NOT NULL,
   id_Prices INTEGER NOT NULL,
-<<<<<<< HEAD
   created_at varchar(255) NOT NULL,
   updated_at varchar(255) NOT NULL,
   PRIMARY KEY (id)
@@ -66,23 +65,15 @@ FROM '/Users/karen8/Documents/GitHub/localspots-travelers-server/db_postgres/pri
 COPY Trip(id,num_adult,num_child,id_account,id_Prices,created_at,updated_at) 
 FROM '/Users/karen8/Documents/GitHub/localspots-travelers-server/db_postgres/trip.csv' DELIMITER ',' CSV HEADER;
 
-=======
-  PRIMARY KEY (id)
-);
-
->>>>>>> 61f9510c6c97baf1ac89aae15d1eedb7122dabf5
 -- ---
 -- Foreign Keys 
 -- ---
 
 ALTER TABLE Prices ADD FOREIGN KEY (id_Trips) REFERENCES Trips (id);
 ALTER TABLE Trip ADD FOREIGN KEY (id_Prices) REFERENCES Prices (id);
-<<<<<<< HEAD
 
 -- ---
 -- INDEXES
 -- ---
 create index primary_lookup
 on Prices (id_Trips);
-=======
->>>>>>> 61f9510c6c97baf1ac89aae15d1eedb7122dabf5
