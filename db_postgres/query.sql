@@ -65,3 +65,16 @@ where id = 800000;
  update Prices
 set trip_availability = trip_availability - 1
 where id = 900000;
+
+
+localspots_calendar=# SELECT pg_size_pretty( pg_database_size('localspots_calendar') );
+ pg_size_pretty
+----------------
+ 2079 MB
+(1 row)
+
+localspots_calendar=# SELECT pg_size_pretty( pg_total_relation_size('trip') );
+ pg_size_pretty
+----------------
+ 1809 MB
+(1 row)

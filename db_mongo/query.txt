@@ -47,3 +47,28 @@ db.prices.updateOne()
 db.trips.updateOne()
 
 git filter-branch -f --index-filter "git rm -rf --cached --ignore-unmatch db_postgres/trip.csv" HEAD
+
+
+-- MAKING A NEW Document
+db.trip.insert({
+price: 2,
+  date: 20201213,
+  fee_cancellation: 100,
+  trip_availability: 20,
+  tripType: 1,
+  tripname: 2,
+  booking_id: 3,
+  adults: 2,
+  children: 0
+	}).explain("executionStats")
+
+
+explain analyze  INSERT INTO Trip (id, num_adult,num_child,id_account,id_Prices,created_at,updated_at) 
+VALUES (1000008, 2, 1, 1, 900000, now(), now());
+COMMIT;
+
+db.trip.insertOne(
+   { item: "canvas", qty: 100, tags: ["cotton"], size: { h: 28, w: 35.5, uom: "cm" } }
+)
+
+db.trip.findOne({id:1}).explain("executionStats")
