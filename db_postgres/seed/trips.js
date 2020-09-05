@@ -7,7 +7,7 @@ const writeTrips = fs.createWriteStream('trips.csv');
 writeTrips.write('id,name,description,duration,numtotal_booked\n', 'utf8');
 
 const writeOneMillion = (writer, encoding, callback) => {
-  let i = 1000000;
+  let i = 10000000;
   let id = 0;
 
   const thingsToDo = ['a day trip at ', 'a nice day trip at ', 'explore the beautiful ', 'a full day trip at '];
